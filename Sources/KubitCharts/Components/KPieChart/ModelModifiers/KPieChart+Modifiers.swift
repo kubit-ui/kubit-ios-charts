@@ -135,4 +135,28 @@ public extension KPieChart {
         pieChart.model.accessibility.label = label
         return pieChart
     }
+    
+    /// Accessibility label setter for  ``KPieChart``.
+    /// - Parameter value: unique value for the accessibility component.
+    /// - Returns: updated ``KPieChart``.
+    func accessibilityValue(_ value: String?) -> KPieChart {
+        guard value != model.accessibility.value else {
+            return self
+        }
+        let pieChart = self
+        pieChart.model.accessibility.value = value
+        return pieChart
+    }
+
+    /// Accessibility label setter for  ``KPieChart``.
+    /// - Parameter hint: unique hint for the accessibility component.
+    /// - Returns: updated ``KPieChart``.
+    func accessibilityHint(_ hint: String?) -> KPieChart {
+        guard hint != model.accessibility.hint else {
+            return self
+        }
+        let pieChart = self
+        pieChart.model.accessibility.hint = hint
+        return pieChart
+    }
 }

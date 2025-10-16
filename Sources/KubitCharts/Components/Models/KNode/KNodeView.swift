@@ -7,7 +7,12 @@ struct KNodeView: View {
     var scrollOffset: CGSize
 
     var body: some View {
-        nodeView
+        ZStack {
+            nodeView
+            GeometryReader { geo in
+                AccessibleNodeView(xAxis: xAxis, yAxis: yAxis, node: node, scrollOffset: scrollOffset, size: geo.size)
+            }
+        }
     }
 }
 

@@ -1,21 +1,22 @@
-public extension KPieChart {
+// swiftlint:disable:this file_name
+import SwiftUI
+
+/// This extension provides Accessibility setup for the component.
+public extension KAxis.Point {
     /// Accessibility information needed to make the component accessible and testable.
-    struct Accessibility {
+    struct Accessibility: Equatable {
         /// It is used as `accessibilityIdentifier` for the component.
-        var identifier: String
+        public var identifier: String
         /// It is used as `accessibilityLabel` for the component.
-        var label: String?
+        public var label: String?
         /// It is used as `accessibilityValue` for the component.
-        var value: String?
+        public var value: String?
         /// It is used as `accessibilityHint` for the component.
-        var hint: String?
+        public var hint: String?
 
         /// It is used to know if the accessibility has been configured for this component.
         public var isAccessible: Bool {
             label != nil || value != nil || hint != nil
         }
-
-        var iconIdentifier: String { "\(identifier)Icon" }
-        var labelIdentifier: String { "\(identifier)Label" }
     }
 }

@@ -4,7 +4,7 @@ public import SwiftUI
 public extension KShape {
     /// Unmapped position of the shape. Origin and radius need to be expressed in the same magnitudes of the axes.
     struct Position: Equatable {
-        var center: CGPoint
+        public private(set) var center: CGPoint
         var xRadius: CGFloat
         var rotation: Angle
         var haloWidth: CGFloat

@@ -30,9 +30,10 @@ public struct KPieChart: View {
     ///   - font: font style to be shown on the component.
     ///   - identifier: a unique identifier for the accessibility component.
     public init(segments: [Segment], font: Font, identifier: String) {
-        self.model = Model(configuration: Configuration(segments: segments),
-                           style: StyleConfiguration(font: font),
-                           accessibility: Accessibility(identifier: identifier))
+        self.model = Model(
+                    configuration: Configuration(segments: segments),
+                    style: StyleConfiguration(font: font),
+                    accessibility: Accessibility(identifier: identifier))
     }
 
     public var body: some View {
@@ -51,8 +52,10 @@ public struct KPieChart: View {
             }
             .frame(width: chartSize, height: chartSize)
             .accessibilityElement(children: .contain)
-            .accessibilityLabel(accessibility.label ?? "")
             .accessibilityIdentifier(accessibility.identifier)
+            .accessibilityLabel(accessibility.label ?? "")
+            .accessibilityValue(accessibility.value ?? "")
+            .accessibilityHint(accessibility.hint ?? "")
         }
     }
 }
@@ -181,13 +184,13 @@ private extension KPieChart {
         var endDegrees: Double = isHalfPieChart ? -90 : 0
         var slicesData: [SliceData] = []
 
-        auxiliarSegments.forEach { slice in
+        auxiliarSegments.forEach { segment in
             let totalDegrees: Double = isHalfPieChart ? 179.7 : 360
-            let degrees: Double = slice.value * totalDegrees / totalAmount
+            let degrees: Double = segment.value * totalDegrees / totalAmount
             slicesData.append(SliceData(
                 startAngle: Angle(degrees: endDegrees),
                 endAngle: Angle(degrees: endDegrees + degrees),
-                color: slice.color))
+                segment: segment))
             endDegrees += degrees
         }
         return slicesData
