@@ -1,0 +1,129 @@
+---
+# only analyze Sources and Storybook directory
+included:
+  - Sources
+  - Storybook
+  - Tests
+analyzer_rules:
+  - capture_variable
+  - unused_import
+disabled_rules:
+  - todo
+  - multiple_closures_with_trailing_closure
+opt_in_rules:
+  - missing_docs
+  - array_init
+  - attributes
+  - closure_end_indentation
+  - closure_spacing
+  - collection_alignment
+  - contains_over_first_not_nil
+  - discarded_notification_center_observer
+  - discouraged_assert
+  - empty_count
+  - empty_string
+  - empty_xctest_method
+  - explicit_init
+  - extension_access_modifier
+  - fallthrough
+  - fatal_error_message
+  - file_header
+  - file_name
+  - first_where
+  - ibinspectable_in_extension
+  - identical_operands
+  - joined_default_parameter
+  - let_var_whitespace
+  - last_where
+  - literal_expression_end_indentation
+  - lower_acl_than_parent
+  - nimble_operator
+  - nslocalizedstring_key
+  - number_separator
+  - object_literal
+  - operator_usage_whitespace
+  - overridden_super_call
+  - override_in_extension
+  - pattern_matching_keywords
+  - prefer_zero_over_explicit_init
+  - private_action
+  - private_outlet
+  - private_subject
+  - prohibited_super_call
+  - quick_discouraged_call
+  - quick_discouraged_focused_test
+  - quick_discouraged_pending_test
+  - redundant_type_annotation
+  - single_test_class
+  - sorted_first_last
+  - sorted_imports
+  - static_operator
+  - unavailable_function
+  - unneeded_parentheses_in_closure_argument
+  - untyped_error_in_catch
+  - vertical_parameter_alignment_on_call
+  - vertical_whitespace_closing_braces
+  - vertical_whitespace_opening_braces
+  - xct_specific_matcher
+  - yoda_condition
+identifier_name:
+  excluded:
+    - id
+    - qa
+type_name:
+  min_length: 3
+  max_length: 60
+line_length:
+  warning: 130
+  error: 130
+  ignores_comments: true
+function_parameter_count:
+  warning: 6
+cyclomatic_complexity:
+  warning: 15
+nesting:
+  type_level: 2
+  function_level: 2
+  check_nesting_in_closures_and_statements: true
+  always_allow_one_type_in_functions: false
+number_separator:
+  minimum_length: 5
+file_name:
+  excluded:
+    - main.swift
+    - LinuxMain.swift
+    - TestHelpers.swift
+    - shim.swift
+    - AutomaticRuleTests.generated.swift
+custom_rules:
+  trailing_or_closing_spaces_on_argument_calls:
+    name: "Trailing or closing spaces on argument calls"
+    regex: '(\( | \))'
+    message: ""
+    severity: warning
+  disable_print:
+    name: "Print usage"
+    regex: '((\bprint)|(Swift\.print)|(\bdebugPrint)|(Swift\.debugPrint)|(\bdump)|(Swift\.dump))\s*\('
+    message: "Use project Logger over Swift print"
+    severity: error
+  disable_dispatchgroup:
+    name: "DispatchGroup usage"
+    regex: 'DispatchGroup'
+    message: "Use TaskGroup wrapper over DispatchGroup"
+    severity: error
+  line_break_missing_after_open_condition:
+    name: "Line break missing after open condition"
+    regex: '[^\n\w]+(if|else|while|repeat|switch|do|catch)\s[^\n]*\{[^\n]+'
+    message: "Add a line break after condition curly brace"
+    severity: warning
+  line_break_missing_before_close_condition:
+    name: "Line break missing before close condition"
+    regex: 'return[^\{\n]+\}'
+    message: "Add a line break before close condition curly brace"
+    severity: warning
+  disable_locale_current:
+    name: "Invalid access to Locale"
+    regex: 'Locale.current'
+    message: "Use LocaleManager.shared.getLocaleForLiterals() to access user preferred Locale"
+    severity: error
+...

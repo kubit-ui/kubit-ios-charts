@@ -1,0 +1,493 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		005DA9BA2EA7B50C004C385B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 005DA9B52EA7B50C004C385B /* Assets.xcassets */; };
+		005DA9BC2EA7B50C004C385B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005DA9B62EA7B50C004C385B /* ContentView.swift */; };
+		005DA9BD2EA7B50C004C385B /* KubitChartsDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005DA9B82EA7B50C004C385B /* KubitChartsDemoApp.swift */; };
+		005DA9BE2EA7B50C004C385B /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005DA9B02EA7B50C004C385B /* Component.swift */; };
+		005DA9BF2EA7B50C004C385B /* KCustomBackgroundChartPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005DA9A82EA7B50C004C385B /* KCustomBackgroundChartPreview.swift */; };
+		005DA9C02EA7B50C004C385B /* ComponentGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005DA9B12EA7B50C004C385B /* ComponentGroup.swift */; };
+		005DA9C12EA7B50C004C385B /* KPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005DA9B22EA7B50C004C385B /* KPreview.swift */; };
+		005DA9C22EA7B50C004C385B /* KLineChartPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005DA9AB2EA7B50C004C385B /* KLineChartPreview.swift */; };
+		005DA9C32EA7B50C004C385B /* KAxisChartPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005DA9A62EA7B50C004C385B /* KAxisChartPreview.swift */; };
+		005DA9C42EA7B50C004C385B /* KIntersectLinePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005DA9A92EA7B50C004C385B /* KIntersectLinePreview.swift */; };
+		005DA9C52EA7B50C004C385B /* SBAxisHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005DA9A42EA7B50C004C385B /* SBAxisHelper.swift */; };
+		005DA9C62EA7B50C004C385B /* KZoomAreaChartPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005DA9AE2EA7B50C004C385B /* KZoomAreaChartPreview.swift */; };
+		005DA9C72EA7B50C004C385B /* KAxis+HasLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005DA99F2EA7B50C004C385B /* KAxis+HasLabels.swift */; };
+		005DA9C82EA7B50C004C385B /* KAxis+Paddings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005DA9A02EA7B50C004C385B /* KAxis+Paddings.swift */; };
+		005DA9C92EA7B50C004C385B /* KNodeChartPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005DA9AC2EA7B50C004C385B /* KNodeChartPreview.swift */; };
+		005DA9CA2EA7B50C004C385B /* KPieChartPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005DA9AD2EA7B50C004C385B /* KPieChartPreview.swift */; };
+		005DA9CB2EA7B50C004C385B /* Storybook+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005DA9A22EA7B50C004C385B /* Storybook+Colors.swift */; };
+		005DA9CC2EA7B50C004C385B /* KBarChartPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005DA9A72EA7B50C004C385B /* KBarChartPreview.swift */; };
+		005DA9CD2EA7B50C004C385B /* Optional+NilOrEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005DA9A12EA7B50C004C385B /* Optional+NilOrEmpty.swift */; };
+		005DA9CE2EA7B50C004C385B /* KLegendChartPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005DA9AA2EA7B50C004C385B /* KLegendChartPreview.swift */; };
+		005DA9D02EA7B575004C385B /* KubitCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 005DA9CF2EA7B575004C385B /* KubitCharts */; };
+		005DA9D32EA7B603004C385B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 005DA9D12EA7B603004C385B /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		005DA96B2EA7B49F004C385B /* KubitChartsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KubitChartsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		005DA99F2EA7B50C004C385B /* KAxis+HasLabels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KAxis+HasLabels.swift"; sourceTree = "<group>"; };
+		005DA9A02EA7B50C004C385B /* KAxis+Paddings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KAxis+Paddings.swift"; sourceTree = "<group>"; };
+		005DA9A12EA7B50C004C385B /* Optional+NilOrEmpty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+NilOrEmpty.swift"; sourceTree = "<group>"; };
+		005DA9A22EA7B50C004C385B /* Storybook+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storybook+Colors.swift"; sourceTree = "<group>"; };
+		005DA9A42EA7B50C004C385B /* SBAxisHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBAxisHelper.swift; sourceTree = "<group>"; };
+		005DA9A62EA7B50C004C385B /* KAxisChartPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KAxisChartPreview.swift; sourceTree = "<group>"; };
+		005DA9A72EA7B50C004C385B /* KBarChartPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KBarChartPreview.swift; sourceTree = "<group>"; };
+		005DA9A82EA7B50C004C385B /* KCustomBackgroundChartPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KCustomBackgroundChartPreview.swift; sourceTree = "<group>"; };
+		005DA9A92EA7B50C004C385B /* KIntersectLinePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KIntersectLinePreview.swift; sourceTree = "<group>"; };
+		005DA9AA2EA7B50C004C385B /* KLegendChartPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KLegendChartPreview.swift; sourceTree = "<group>"; };
+		005DA9AB2EA7B50C004C385B /* KLineChartPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KLineChartPreview.swift; sourceTree = "<group>"; };
+		005DA9AC2EA7B50C004C385B /* KNodeChartPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KNodeChartPreview.swift; sourceTree = "<group>"; };
+		005DA9AD2EA7B50C004C385B /* KPieChartPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPieChartPreview.swift; sourceTree = "<group>"; };
+		005DA9AE2EA7B50C004C385B /* KZoomAreaChartPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KZoomAreaChartPreview.swift; sourceTree = "<group>"; };
+		005DA9B02EA7B50C004C385B /* Component.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
+		005DA9B12EA7B50C004C385B /* ComponentGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentGroup.swift; sourceTree = "<group>"; };
+		005DA9B22EA7B50C004C385B /* KPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPreview.swift; sourceTree = "<group>"; };
+		005DA9B52EA7B50C004C385B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		005DA9B62EA7B50C004C385B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		005DA9B82EA7B50C004C385B /* KubitChartsDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KubitChartsDemoApp.swift; sourceTree = "<group>"; };
+		005DA9D22EA7B603004C385B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		005DA9682EA7B49F004C385B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				005DA9D02EA7B575004C385B /* KubitCharts in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		005DA9202EA7B380004C385B = {
+			isa = PBXGroup;
+			children = (
+				005DA92A2EA7B380004C385B /* Products */,
+				005DA9B92EA7B50C004C385B /* KubitChartsDemo */,
+			);
+			sourceTree = "<group>";
+		};
+		005DA92A2EA7B380004C385B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				005DA96B2EA7B49F004C385B /* KubitChartsDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		005DA9A32EA7B50C004C385B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				005DA99F2EA7B50C004C385B /* KAxis+HasLabels.swift */,
+				005DA9A02EA7B50C004C385B /* KAxis+Paddings.swift */,
+				005DA9A12EA7B50C004C385B /* Optional+NilOrEmpty.swift */,
+				005DA9A22EA7B50C004C385B /* Storybook+Colors.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		005DA9A52EA7B50C004C385B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				005DA9A42EA7B50C004C385B /* SBAxisHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		005DA9AF2EA7B50C004C385B /* Previews */ = {
+			isa = PBXGroup;
+			children = (
+				005DA9A62EA7B50C004C385B /* KAxisChartPreview.swift */,
+				005DA9A72EA7B50C004C385B /* KBarChartPreview.swift */,
+				005DA9A82EA7B50C004C385B /* KCustomBackgroundChartPreview.swift */,
+				005DA9A92EA7B50C004C385B /* KIntersectLinePreview.swift */,
+				005DA9AA2EA7B50C004C385B /* KLegendChartPreview.swift */,
+				005DA9AB2EA7B50C004C385B /* KLineChartPreview.swift */,
+				005DA9AC2EA7B50C004C385B /* KNodeChartPreview.swift */,
+				005DA9AD2EA7B50C004C385B /* KPieChartPreview.swift */,
+				005DA9AE2EA7B50C004C385B /* KZoomAreaChartPreview.swift */,
+			);
+			path = Previews;
+			sourceTree = "<group>";
+		};
+		005DA9B32EA7B50C004C385B /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				005DA9B02EA7B50C004C385B /* Component.swift */,
+				005DA9B12EA7B50C004C385B /* ComponentGroup.swift */,
+				005DA9B22EA7B50C004C385B /* KPreview.swift */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		005DA9B42EA7B50C004C385B /* Previews */ = {
+			isa = PBXGroup;
+			children = (
+				005DA9A32EA7B50C004C385B /* Extensions */,
+				005DA9A52EA7B50C004C385B /* Helpers */,
+				005DA9AF2EA7B50C004C385B /* Previews */,
+				005DA9B32EA7B50C004C385B /* SupportFiles */,
+			);
+			path = Previews;
+			sourceTree = "<group>";
+		};
+		005DA9B92EA7B50C004C385B /* KubitChartsDemo */ = {
+			isa = PBXGroup;
+			children = (
+				005DA9B42EA7B50C004C385B /* Previews */,
+				005DA9B52EA7B50C004C385B /* Assets.xcassets */,
+				005DA9B62EA7B50C004C385B /* ContentView.swift */,
+				005DA9B82EA7B50C004C385B /* KubitChartsDemoApp.swift */,
+				005DA9D12EA7B603004C385B /* LaunchScreen.storyboard */,
+			);
+			path = KubitChartsDemo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		005DA96A2EA7B49F004C385B /* KubitChartsDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 005DA9732EA7B4A1004C385B /* Build configuration list for PBXNativeTarget "KubitChartsDemo" */;
+			buildPhases = (
+				005DA9672EA7B49F004C385B /* Sources */,
+				005DA9682EA7B49F004C385B /* Frameworks */,
+				005DA9692EA7B49F004C385B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KubitChartsDemo;
+			packageProductDependencies = (
+				005DA9CF2EA7B575004C385B /* KubitCharts */,
+			);
+			productName = KubitCharts;
+			productReference = 005DA96B2EA7B49F004C385B /* KubitChartsDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		005DA9212EA7B380004C385B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					005DA96A2EA7B49F004C385B = {
+						CreatedOnToolsVersion = 26.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 005DA9242EA7B380004C385B /* Build configuration list for PBXProject "KubitChartsDemo" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 005DA9202EA7B380004C385B;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				005DA9642EA7B436004C385B /* XCLocalSwiftPackageReference "../../opensource-kubit-ios-charts" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 005DA92A2EA7B380004C385B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				005DA96A2EA7B49F004C385B /* KubitChartsDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		005DA9692EA7B49F004C385B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				005DA9BA2EA7B50C004C385B /* Assets.xcassets in Resources */,
+				005DA9D32EA7B603004C385B /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		005DA9672EA7B49F004C385B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				005DA9BC2EA7B50C004C385B /* ContentView.swift in Sources */,
+				005DA9BD2EA7B50C004C385B /* KubitChartsDemoApp.swift in Sources */,
+				005DA9BE2EA7B50C004C385B /* Component.swift in Sources */,
+				005DA9BF2EA7B50C004C385B /* KCustomBackgroundChartPreview.swift in Sources */,
+				005DA9C02EA7B50C004C385B /* ComponentGroup.swift in Sources */,
+				005DA9C12EA7B50C004C385B /* KPreview.swift in Sources */,
+				005DA9C22EA7B50C004C385B /* KLineChartPreview.swift in Sources */,
+				005DA9C32EA7B50C004C385B /* KAxisChartPreview.swift in Sources */,
+				005DA9C42EA7B50C004C385B /* KIntersectLinePreview.swift in Sources */,
+				005DA9C52EA7B50C004C385B /* SBAxisHelper.swift in Sources */,
+				005DA9C62EA7B50C004C385B /* KZoomAreaChartPreview.swift in Sources */,
+				005DA9C72EA7B50C004C385B /* KAxis+HasLabels.swift in Sources */,
+				005DA9C82EA7B50C004C385B /* KAxis+Paddings.swift in Sources */,
+				005DA9C92EA7B50C004C385B /* KNodeChartPreview.swift in Sources */,
+				005DA9CA2EA7B50C004C385B /* KPieChartPreview.swift in Sources */,
+				005DA9CB2EA7B50C004C385B /* Storybook+Colors.swift in Sources */,
+				005DA9CC2EA7B50C004C385B /* KBarChartPreview.swift in Sources */,
+				005DA9CD2EA7B50C004C385B /* Optional+NilOrEmpty.swift in Sources */,
+				005DA9CE2EA7B50C004C385B /* KLegendChartPreview.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		005DA9D12EA7B603004C385B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				005DA9D22EA7B603004C385B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		005DA9322EA7B383004C385B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.7;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		005DA9332EA7B383004C385B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.7;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		005DA9742EA7B4A1004C385B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kubit-ui.KubitCharts";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		005DA9752EA7B4A1004C385B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kubit-ui.KubitCharts";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		005DA9242EA7B380004C385B /* Build configuration list for PBXProject "KubitChartsDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				005DA9322EA7B383004C385B /* Debug */,
+				005DA9332EA7B383004C385B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		005DA9732EA7B4A1004C385B /* Build configuration list for PBXNativeTarget "KubitChartsDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				005DA9742EA7B4A1004C385B /* Debug */,
+				005DA9752EA7B4A1004C385B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		005DA9642EA7B436004C385B /* XCLocalSwiftPackageReference "../../opensource-kubit-ios-charts" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../../opensource-kubit-ios-charts";
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		005DA9CF2EA7B575004C385B /* KubitCharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = KubitCharts;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 005DA9212EA7B380004C385B /* Project object */;
+}
