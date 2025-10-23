@@ -15,7 +15,6 @@
     * [Using legend](#using-legend)
   * [Example: Pie Chart](#example-pie-chart)
   * [Example: Zoom Area Chart](#example-zoom-area-chart)
-* [Previews](#previews)
 * [Contributions](#contributions)
 
 ## Description
@@ -133,6 +132,7 @@ let yAxis = KAxisBuilder()
  .xAxis(xAxis)
  .yAxis(yAxis)
  ```
+ 
 ![Axis Chart](/assets/AxisChart.gif)
 
 ### Using custom background
@@ -146,6 +146,7 @@ KAxisChart()
         accessibility: KCustomBackground.Accessibility(identifier: "RemoteSourceIdentifier")))
 
  ```
+ 
 ![Custom background](/assets/CustomBackground.gif)
 
 ### Using nodes
@@ -170,6 +171,7 @@ KAxisChart()
     .yAxis(yAxis)
     .addNodes(nodes)
  ```
+ 
 ![Node](/assets/Node.gif)
 
 ### Using legend
@@ -184,6 +186,7 @@ import KubitCharts
      .titleAlignment(.end)
      .orientation(.vertical)
  ```
+ 
 ![Legend](/assets/Legend.gif)
 
 ### Example: Pie Chart
@@ -238,10 +241,6 @@ opacityColor: Color.blue)
 ```
 
 ![Zoom Area Chart](/assets/ZoomAreaChart.gif)
-
-## Previews
-To see examples of how to initialize and use each Chart component provided by this library, please refer to the corresponding Preview files. Each file contains important information on initialization and usage. Additionally, by open the 'Storybook' dependency file(`Storybook/Package.swift`), you can explore these previews to interact with the components.
-
 
 ## Contributions
 
