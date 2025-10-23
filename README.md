@@ -146,8 +146,8 @@ KAxisChart()
         accessibility: KCustomBackground.Accessibility(identifier: "RemoteSourceIdentifier")))
 
  ```
- 
-![Custom background](/assets/CustomBackground.png)
+
+<img src="/assets/CustomBackground.png" width="300">
 
 ### Using nodes
 The following example demonstrates how to use nodes into an axis chart:
