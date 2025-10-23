@@ -147,7 +147,7 @@ KAxisChart()
 
  ```
  
-![Custom background](/assets/CustomBackground.gif)
+![Custom background](/assets/CustomBackground.png)
 
 ### Using nodes
 The following example demonstrates how to use nodes into an axis chart:
