@@ -1,9 +1,8 @@
 public import SwiftUI
 
 /// #  KZoomAreaChart
+///
 /// This interactive thumbnail usually follows a graph and represents the same period as the chart. It allows users to zoom in on a more specific period of time within the graph for a more detailed view.
-/// [Figma design]
-/// (figma.com/design/XJnmdNlhMwmyx4QpGGpIN3/-R.8--Kubit-Global-Documentation?node-id=107594-45887&t=cwA2HXdQsEyXfhbG-4)
 ///
 /// ## How to use it:
 /// ```

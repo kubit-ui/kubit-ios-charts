@@ -1,4 +1,3 @@
-// swiftlint:disable:this file_name
 
 extension KBar.Segment {
     /// Accessibility information for the segment.

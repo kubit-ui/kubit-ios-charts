@@ -5,9 +5,6 @@ public import SwiftUI
 /// This component is used to show images. Images can be LocalResources such as assets, or RemoteResources such as http images.
 /// For RemoteResources you can also use GSAsyncImage also.
 ///
-///
-/// [Figma design](N/A)
-///
 /// ## How to use it:
 /// ```
 /// // Local

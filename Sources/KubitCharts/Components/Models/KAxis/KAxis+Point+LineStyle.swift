@@ -1,4 +1,3 @@
-// swiftlint:disable:this file_name
 public import SwiftUI
 
 /// This extension provides point style for the component.

@@ -1,6 +1,28 @@
 public import Foundation
 
-/// KBar model.
+/// #  KBar
+///
+/// Is a visual representation of categorical data by means of rectangular bars. The length or height of each bar is proportional to the value it represents. It can contain horizontal or vertical bars to compare the values of different categories. Used to compare multiple part-to-whole relationships or ranking a single data set.
+///
+/// ## How to use it:
+/// ```
+/// let verticalBar = KBar.vertical(
+///     origin: 1,
+///     width: 0.5,
+///     segments: [
+///         KBar.Segment(
+///             identifier: UUID().uuidString,
+///             value: 1.0,
+///             style: KBar.Segment.Style(color: .black, corners: .square),
+///             accessibilityLabel: "Acc label for bar 1 segment 1",
+///             accessibilityValue: "1 point")
+///     ],
+///     yOffset: .zero,
+///     segmentsStyle: KBar.SegmentsStyle(),
+///     labelStyle: KBar.LabelStyle("Bar 1", color: .black, position: .bottom),
+///     accessibilityIdentifier: "Bar Identifier",
+///     accessibilityLabel: "Bar label")
+/// ```
 public struct KBar: Equatable {
     /// The origin point of the bar. It is represented as a CGPoint.
     public let origin: CGPoint

@@ -1,6 +1,5 @@
 import SwiftUI
 
-// swiftlint:disable function_parameter_count
 extension View {
     @ViewBuilder
     func charts(xAxis: KAxis,
@@ -49,4 +48,3 @@ extension View {
         }
     }
 }
-// swiftlint:enable function_parameter_count

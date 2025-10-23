@@ -2,11 +2,7 @@ public import SwiftUI
 
 /// #  KPieChart.
 ///
-/// It is a graphic component that accepts input values and visually represents them
-/// as a pie chart, providing a clear and intuitive way to display data distribution.
-///
-/// [Figma design]
-/// (figma.com/design/n9UUfTNerkDed8GBQMb6RM/(MAIN)-Kubit-Global-Documentation?node-id=54306-218134&t=gZ9r5Dc0x0pEcpNW-1)
+/// A PieChart is a visual representation that breaks down numerical data into slices of a circle, showing how various components contribute to the total. It clearly illustrates the proportions of each segment, making it easy to grasp the overall distribution of the data.
 ///
 /// ## How to use it:
 /// ```

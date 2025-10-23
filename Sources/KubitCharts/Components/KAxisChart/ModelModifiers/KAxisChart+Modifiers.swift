@@ -402,4 +402,3 @@ public extension KAxisChart {
         return chart
     }
 }
-// swiftlint:disable:this file_length

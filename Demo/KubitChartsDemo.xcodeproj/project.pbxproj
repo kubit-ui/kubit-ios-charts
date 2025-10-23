@@ -29,6 +29,7 @@
 		005DA9CE2EA7B50C004C385B /* KLegendChartPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005DA9AA2EA7B50C004C385B /* KLegendChartPreview.swift */; };
 		005DA9D02EA7B575004C385B /* KubitCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 005DA9CF2EA7B575004C385B /* KubitCharts */; };
 		005DA9D32EA7B603004C385B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 005DA9D12EA7B603004C385B /* LaunchScreen.storyboard */; };
+		11F757D02EA962C900A7F972 /* KubitCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 11F757CF2EA962C900A7F972 /* KubitCharts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				005DA9D02EA7B575004C385B /* KubitCharts in Frameworks */,
+				11F757D02EA962C900A7F972 /* KubitCharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +172,7 @@
 			name = KubitChartsDemo;
 			packageProductDependencies = (
 				005DA9CF2EA7B575004C385B /* KubitCharts */,
+				11F757CF2EA962C900A7F972 /* KubitCharts */,
 			);
 			productName = KubitCharts;
 			productReference = 005DA96B2EA7B49F004C385B /* KubitChartsDemo.app */;
@@ -200,7 +203,7 @@
 			mainGroup = 005DA9202EA7B380004C385B;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				005DA9642EA7B436004C385B /* XCLocalSwiftPackageReference "../../opensource-kubit-ios-charts" */,
+				11F757CE2EA962C900A7F972 /* XCLocalSwiftPackageReference "../../kubit-ios-charts" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 005DA92A2EA7B380004C385B /* Products */;
@@ -476,14 +479,18 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		005DA9642EA7B436004C385B /* XCLocalSwiftPackageReference "../../opensource-kubit-ios-charts" */ = {
+		11F757CE2EA962C900A7F972 /* XCLocalSwiftPackageReference "../../kubit-ios-charts" */ = {
 			isa = XCLocalSwiftPackageReference;
-			relativePath = "../../opensource-kubit-ios-charts";
+			relativePath = "../../kubit-ios-charts";
 		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		005DA9CF2EA7B575004C385B /* KubitCharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = KubitCharts;
+		};
+		11F757CF2EA962C900A7F972 /* KubitCharts */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = KubitCharts;
 		};
