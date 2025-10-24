@@ -164,7 +164,7 @@ KAxisChart()
  ```
  
 #### Using legend
-The following example demonstrates how to use legends into an axis chart:
+The following example illustrates how to use legends in an axis chart:
 
 ```Swift
 import KubitCharts
