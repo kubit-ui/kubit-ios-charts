@@ -183,7 +183,7 @@ import KubitCharts
 
 ### Example: Pie Chart
 
-The following example demonstrates how to initialize and configure a zoom area chart:
+The following example illustrates how to initialize and configure a zoom area chart:
 
 ```Swift
 import KubitCharts
