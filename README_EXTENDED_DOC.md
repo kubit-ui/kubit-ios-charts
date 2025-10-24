@@ -74,7 +74,7 @@ view.addSubview(lineChart)
 
 ### Example: Intersect Line Chart
 
-The following example demonstrates how to initialize and configure a intersect line chart:
+The following example illustrates how to initialize and configure an intersect line chart:
 
 ```Swift
 import KubitCharts
