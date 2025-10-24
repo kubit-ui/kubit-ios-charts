@@ -102,7 +102,7 @@ KAxisChart()
 <img src="assets/IntersectLineChart.gif" alt="Intersect Line Chart">
 
 ### Example: Axis Chart
-The following example demonstrates how to initialize and configure a axis chart:
+The following example illustrates how to initialize and configure an axis chart:
 
 ```Swift
 import KubitCharts
