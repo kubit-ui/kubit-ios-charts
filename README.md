@@ -18,7 +18,7 @@
 
 ## Overview
 
-Kubit Charts is a modern, accessible chart library for iOS applications built with SwifUI. Designed with accessibility as a core principle, it follows WCAG (Web Content Accessibility Guidelines) standards to ensure inclusive design for all users.
+Kubit Charts is a modern, accessible chart library for iOS applications built with SwiftUI. It was designed with accessibility as a core principle and follows WCAG (Web Content Accessibility Guidelines) standards to ensure an inclusive experience for all users.
 
 > 💡 **Cross-platform**: Kubit Charts is also available for [Web](https://github.com/kubit-ui/kubit-react-charts) and [Android](https://github.com/kubit-ui/kubit-android-charts) platforms, enabling consistent chart experiences across all your applications.
 
