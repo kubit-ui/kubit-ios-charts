@@ -127,7 +127,7 @@ let yAxis = KAxisBuilder()
 <img src="assets/AxisChart.gif" alt="Axis Chart">
 
 #### Using custom background
-The following example demonstrates how to use a custom background into an axis chart:
+The following example illustrates how to use a custom background in an axis chart:
 
 ```Swift
 import KubitCharts
