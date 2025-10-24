@@ -31,6 +31,22 @@ public final class KAxisBuilder {
         return self
     }
 
+    /// It adds a point to the axis with a custom label and line style. Also adding accessibility configuration to it.
+    /// - Parameters:
+    ///   - value: the position of the point along the axis. Typically, `0` is the origin.
+    ///   Positive values are displayed to the right and negative values to the left.
+    ///   - labelStyle: instance of ``KAxis/Point/LabelStyle``. `.none` by default.
+    ///   - lineStyle: instance of ``KAxis/Point/LineStyle``. `.none` by default.
+    ///   - accessibility: instance of ``KAxis/Point/Accessibility``.
+    /// - Returns: the updated builder, allowing method chaining.
+    public func addPoint(_ value: CGFloat,
+                         labelStyle: KAxis.Point.LabelStyle = .none,
+                         lineStyle: KAxis.Point.LineStyle = .none,
+                         accessibility: KAxis.Point.Accessibility) -> Self {
+        self.points.append(KAxis.Point(value, labelStyle: labelStyle, lineStyle: lineStyle, accessibility: accessibility))
+        return self
+    }
+
     /// It adds a point to the axis with a solid line and a custom label style.
     /// - Parameters:
     ///   - value: the position of the point along the axis.

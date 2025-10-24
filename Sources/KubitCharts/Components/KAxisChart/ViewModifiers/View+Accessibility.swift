@@ -33,7 +33,7 @@ extension AxisGrid {
                         path.move(to: line.origin)
                         path.addLine(to: line.end)
                     }
-                    .strokedPath(.init(lineWidth: 30, lineCap: .round))
+                    .strokedPath(StrokeStyle(lineWidth: 30, lineCap: .round))
                     .fill(.black.opacity(0.001))
                     .accessibilityIdentifier(accessibility.identifier)
                     .accessibilityLabel(accessibility.label ?? "")
@@ -81,7 +81,7 @@ extension KNodeView {
                         endAngle: Angle(degrees: 360.0),
                         clockwise: true)
                 }
-                .strokedPath(.init(lineWidth: radius * 2, lineCap: .round))
+                .strokedPath(StrokeStyle(lineWidth: radius * 2, lineCap: .round))
                 .fill(.black.opacity(0.001))
                 .accessibilityIdentifier(node.accessibility.identifier)
                 .accessibilityLabel(node.accessibility.label ?? "")

@@ -1,5 +1,5 @@
 /// This extension provides accessibility utilities for KNode.
-/// Use this extension to expose meaningful accesibility information.
+/// Use this extension to expose meaningful accessibility information.
 public extension KNode {
     /// Accessibility for KNode.
     struct Accessibility: Equatable {
@@ -21,8 +21,7 @@ public extension KNode {
         }
 
         /// Accessibility for interactuable nodes (buttons).
-        /// - Parameters:
-        ///   - identifier: accessibility identifier for the node.
+        /// - Parameter identifier: accessibility identifier for the node.
         public static func interactuable(identifier: String) -> Accessibility {
             Accessibility(identifier: identifier, isButton: true)
         }
