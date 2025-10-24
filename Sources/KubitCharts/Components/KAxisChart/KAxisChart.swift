@@ -2,8 +2,8 @@ public import SwiftUI
 
 /// #  KAxisChart
 ///
-/// Design Specifications
-/// A foundational chart type that uses a Cartesian coordinate system, with a horizontal X-axis and a vertical Y-axis, to visually represent quantitative data. It supports various scale types—such as categorical, temporal, percentage-based, or numeric—making it ideal for comparing values across a shared timeline or category axis.
+/// Design specifications
+/// Foundational chart type that uses a Cartesian coordinate system, with a horizontal X-axis and a vertical Y-axis to represent quantitative data visually. It supports various scale types such as categorical, temporal, percentage-based, or numeric, making it ideal for comparing values across categories or over time.
 ///
 /// ## How to use it:
 /// ```
