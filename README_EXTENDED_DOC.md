@@ -203,7 +203,7 @@ view.addSubview(pieChart)
 
 ### Example: Zoom Area Chart
 
-The following example demonstrates how to initialize and configure a pie chart:
+The following example illustrates how to initialize and configure a pie chart:
 
 ```Swift
 import KubitCharts
