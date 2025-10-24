@@ -17,10 +17,6 @@ let package = Package(
     targets: [
         .target(
             name: "KubitCharts"
-        ),
-        .testTarget(
-            name: "KubitChartsTests",
-            dependencies: ["KubitCharts"]
         )
     ]
 )
