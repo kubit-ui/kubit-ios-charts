@@ -16,8 +16,8 @@
 
 ## Description
 
-Kubit Charts is a library that provides a set of customizable and easy-to-use charts for Android applications. 
-It is built using Jetpack Compose and currently supports:
+Kubit Charts is a library that provides a set of customizable and easy-to-use charts for iOS applications. 
+It is built in SwiftUI and currently supports:
 
 - Axis
 - Line chart
