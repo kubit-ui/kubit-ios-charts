@@ -29,6 +29,13 @@
 		005DA9CE2EA7B50C004C385B /* KLegendChartPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 005DA9AA2EA7B50C004C385B /* KLegendChartPreview.swift */; };
 		005DA9D02EA7B575004C385B /* KubitCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 005DA9CF2EA7B575004C385B /* KubitCharts */; };
 		005DA9D32EA7B603004C385B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 005DA9D12EA7B603004C385B /* LaunchScreen.storyboard */; };
+		00DA83582EAB89AA001B7C56 /* KubitCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 00DA83572EAB89AA001B7C56 /* KubitCharts */; };
+		00DA835B2EAB8A04001B7C56 /* KubitCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 00DA835A2EAB8A04001B7C56 /* KubitCharts */; };
+		00DA835E2EAB8AB0001B7C56 /* KubitCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 00DA835D2EAB8AB0001B7C56 /* KubitCharts */; };
+		00DA83612EAB8AEB001B7C56 /* KubitCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 00DA83602EAB8AEB001B7C56 /* KubitCharts */; };
+		00DA83642EAB8B20001B7C56 /* KubitCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 00DA83632EAB8B20001B7C56 /* KubitCharts */; };
+		00DA83672EAB8B9C001B7C56 /* KubitCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 00DA83662EAB8B9C001B7C56 /* KubitCharts */; };
+		00DA836A2EAB8CA3001B7C56 /* KubitCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 00DA83692EAB8CA3001B7C56 /* KubitCharts */; };
 		11F757D02EA962C900A7F972 /* KubitCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 11F757CF2EA962C900A7F972 /* KubitCharts */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +71,13 @@
 			files = (
 				005DA9D02EA7B575004C385B /* KubitCharts in Frameworks */,
 				11F757D02EA962C900A7F972 /* KubitCharts in Frameworks */,
+				00DA83642EAB8B20001B7C56 /* KubitCharts in Frameworks */,
+				00DA835E2EAB8AB0001B7C56 /* KubitCharts in Frameworks */,
+				00DA83582EAB89AA001B7C56 /* KubitCharts in Frameworks */,
+				00DA836A2EAB8CA3001B7C56 /* KubitCharts in Frameworks */,
+				00DA835B2EAB8A04001B7C56 /* KubitCharts in Frameworks */,
+				00DA83612EAB8AEB001B7C56 /* KubitCharts in Frameworks */,
+				00DA83672EAB8B9C001B7C56 /* KubitCharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +187,13 @@
 			packageProductDependencies = (
 				005DA9CF2EA7B575004C385B /* KubitCharts */,
 				11F757CF2EA962C900A7F972 /* KubitCharts */,
+				00DA83572EAB89AA001B7C56 /* KubitCharts */,
+				00DA835A2EAB8A04001B7C56 /* KubitCharts */,
+				00DA835D2EAB8AB0001B7C56 /* KubitCharts */,
+				00DA83602EAB8AEB001B7C56 /* KubitCharts */,
+				00DA83632EAB8B20001B7C56 /* KubitCharts */,
+				00DA83662EAB8B9C001B7C56 /* KubitCharts */,
+				00DA83692EAB8CA3001B7C56 /* KubitCharts */,
 			);
 			productName = KubitCharts;
 			productReference = 005DA96B2EA7B49F004C385B /* KubitChartsDemo.app */;
@@ -203,7 +224,7 @@
 			mainGroup = 005DA9202EA7B380004C385B;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				11F757CE2EA962C900A7F972 /* XCLocalSwiftPackageReference "../../kubit-ios-charts" */,
+				00DA83682EAB8CA3001B7C56 /* XCLocalSwiftPackageReference "../../kubit-ios-charts" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 005DA92A2EA7B380004C385B /* Products */;
@@ -479,7 +500,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		11F757CE2EA962C900A7F972 /* XCLocalSwiftPackageReference "../../kubit-ios-charts" */ = {
+		00DA83682EAB8CA3001B7C56 /* XCLocalSwiftPackageReference "../../kubit-ios-charts" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = "../../kubit-ios-charts";
 		};
@@ -487,6 +508,34 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		005DA9CF2EA7B575004C385B /* KubitCharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = KubitCharts;
+		};
+		00DA83572EAB89AA001B7C56 /* KubitCharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = KubitCharts;
+		};
+		00DA835A2EAB8A04001B7C56 /* KubitCharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = KubitCharts;
+		};
+		00DA835D2EAB8AB0001B7C56 /* KubitCharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = KubitCharts;
+		};
+		00DA83602EAB8AEB001B7C56 /* KubitCharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = KubitCharts;
+		};
+		00DA83632EAB8B20001B7C56 /* KubitCharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = KubitCharts;
+		};
+		00DA83662EAB8B9C001B7C56 /* KubitCharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = KubitCharts;
+		};
+		00DA83692EAB8CA3001B7C56 /* KubitCharts */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = KubitCharts;
 		};
