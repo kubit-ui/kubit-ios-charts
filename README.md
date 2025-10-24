@@ -24,7 +24,7 @@ Kubit Charts is a modern, accessible chart library for iOS applications built wi
 
 This repository includes the following libraries:
 
-* **KubitCharts**: The main library containing the chart components.
+* **KubitCharts** is the main library that contains the chart components.
 
 ## Requirements
 
