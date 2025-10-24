@@ -3,7 +3,7 @@ public import SwiftUI
 /// # KImage
 ///
 /// This component is used to show images. Images can be LocalResources such as assets, or RemoteResources such as http images.
-/// For RemoteResources you can also use GSAsyncImage also.
+/// For RemoteResources you can also use GSAsyncImage.
 ///
 /// ## How to use it:
 /// ```
