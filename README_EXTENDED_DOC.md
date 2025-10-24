@@ -54,7 +54,7 @@ barChart.configureAppearance(with: .default)
 
 ### Example: Line Chart
 
-The following example demonstrates how to initialize and configure a line chart:
+The following example illustrates how to initialize and configure a line chart:
 
 ```Swift
 import KubitCharts
