@@ -64,7 +64,7 @@ And use this URL to add the dependency: `https://github.com/kubit-ui/kubit-ios-c
 
 ## Live Demo
 
-If you want to add the test the demo app to see the implementation examples, follow the next steps:
+If you want to add the test the demo app to see the implementation examples, follow these steps:
 1. Download or clone this repository.
 2. Open the `Demo/KubitChartsDemo.xcodeproj` file.
 3. Enjoy it!   
