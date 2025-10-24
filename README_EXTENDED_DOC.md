@@ -26,7 +26,7 @@ It is built using Jetpack Compose and currently supports:
 - Pie chart
 - Zoom area chart
 
-This library is an alpha version and is still under development. More charts and features will be added in future releases.
+This library is an alpha version and it is still under development. More charts and features will be added in future releases.
 
 ## Usage
 
