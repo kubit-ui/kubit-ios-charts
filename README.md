@@ -90,7 +90,7 @@ Import the package in the file you would like to use it: `import KubitCharts`
 
 ### Quick Example
 
-Here's a simple LineChart to get you started:
+Here is a simple LineChart to get you started:
 
 ```Swift
 import KubitCharts
