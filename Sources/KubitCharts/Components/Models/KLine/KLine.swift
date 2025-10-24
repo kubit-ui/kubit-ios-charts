@@ -2,7 +2,7 @@ public import SwiftUI
 
 /// #  KLine
 ///
-/// It is a visual representation of data that shows an evolution of one or more variables over a period of time or a continuous sequence.
+/// A visual representation of data that shows an evolution of one or more variables over a period of time or a continuous sequence.
 ///
 /// ## How to use it:
 /// ```
