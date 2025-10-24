@@ -37,9 +37,9 @@ Required software:
 
 ## Installation
 
-To install KubitCharts you can use the Swift Packet Manager (SPM).
-In Xcode navigate to File → Swift Packages → Add Package Dependency...
-Use this URL to add the dependency: `https://github.com/kubit-ui/kubit-ios-charts`
+To install KubitCharts, use the Swift Packet Manager (SPM).
+In Xcode, navigate to File → Swift Packages → Add Package Dependency...
+And use this URL to add the dependency: `https://github.com/kubit-ui/kubit-ios-charts`
 
 <img src="assets/AddingPackage.png" width="800" alt="Adding Package">
 
