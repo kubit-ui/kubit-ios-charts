@@ -34,7 +34,7 @@ Import the package in the file you would like to use it: `import KubitCharts`
 
 ### Example: Bar Chart
 
-The following example demonstrates how to initialize and configure a bar chart using the KubitCharts library:
+The following example illustrates how to initialize and configure a bar chart using the KubitCharts library:
 
 ```Swift
 import KubitCharts
