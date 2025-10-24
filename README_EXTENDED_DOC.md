@@ -140,7 +140,7 @@ KAxisChart()
  ```
 
 #### Using nodes
-The following example demonstrates how to use nodes into an axis chart:
+The following example illustrates how to use nodes in an axis chart:
 
 ```Swift
 import KubitCharts
