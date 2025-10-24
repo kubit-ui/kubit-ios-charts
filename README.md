@@ -115,7 +115,7 @@ For comprehensive guides, examples, and detailed API documentation:
 
 We extend our heartfelt gratitude to all the developers and contributors who have made Kubit Charts possible. Your dedication, feedback, and contributions continue to drive innovation and make this library better for the entire community. Thank you for being part of the Kubit ecosystem!
 
-Contributions are welcome. Please follow the steps below to contribute:
+Contributions are welcome. Please follow these steps below to contribute:
 
 1. Fork the repository.
 2. Create a new branch for your feature or bugfix.
