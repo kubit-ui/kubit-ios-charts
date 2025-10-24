@@ -49,9 +49,3 @@ extension KAxis {
         }
     }
 }
-
-#if DEBUG
-#Preview {
-    KAxisChartPreview()
-}
-#endif

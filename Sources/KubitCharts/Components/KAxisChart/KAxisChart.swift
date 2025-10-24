@@ -2,13 +2,11 @@ public import SwiftUI
 
 /// #  KAxisChart
 ///
-/// A configurable chart component that displays information in an X-Y coordinate system.
-///
-/// [Figma design]
-/// (figma.com/design/n9UUfTNerkDed8GBQMb6RM/(MAIN)-Kubit-Global-Documentation?node-id=58382-6841&t=GJCLUna1smNJ1Uyk-0)
+/// Design specifications
+/// Foundational chart type that uses a Cartesian coordinate system, with a horizontal X-axis and a vertical Y-axis to represent quantitative data visually. It supports various scale types such as categorical, temporal, percentage-based, or numeric, making it ideal for comparing values across categories or over time.
 ///
 /// ## How to use it:
-/// ```swift
+/// ```
 /// let xAxis = KAxisBuilder()
 ///     .addPointWithDefaultSolidLine(0, labelStyle: .labeled("0"))
 ///     .addPointWithDefaultSolidLine(100, labelStyle: .labeled("100"))
@@ -255,11 +253,11 @@ private extension KAxisChart {
 
             if tapped, let node = model as? KNode {
                 if charts.selectedNode != node {
-                    print("selectedNode \(node)") // swiftlint:disable:this disable_print
+                    debugPrint("selectedNode \(node)")
                     charts.selectedNode = node
                     charts.didSelectNode?(node)
                 } else if let selectedNode = charts.selectedNode {
-                    print("unselectedNode \(node)") // swiftlint:disable:this disable_print
+                    debugPrint("unselectedNode \(node)")
                     charts.didUnselectNode?(selectedNode)
                     charts.selectedNode = nil
                 }
@@ -303,111 +301,3 @@ private extension KAxisChart {
         model.shadeRegions
     }
 }
-
-#if DEBUG
-struct KAxisChartPreview: View {
-    var xAxis: KAxis {
-        KAxis(
-            behavior: .scrollable(pointsSpacing: 50.0, centerValue: 0.0),
-            points: [
-                KAxis.Point(-5),
-                KAxis.Point(-4, labelStyle: .labeled("-4"), lineStyle: .dashed()),
-                KAxis.Point(-3, labelStyle: .labeled("-3"), lineStyle: .dashed()),
-                KAxis.Point(-2, labelStyle: .labeled("-2"), lineStyle: .dashed()),
-                KAxis.Point(-1, labelStyle: .labeled("-1"), lineStyle: .dashed()),
-                KAxis.Point(0, labelStyle: .labeled("0", color: .black), lineStyle: .solid(width: 2.0, color: .black)),
-                KAxis.Point(1, labelStyle: .labeled("1"), lineStyle: .dashed()),
-                KAxis.Point(2, labelStyle: .labeled("2"), lineStyle: .dashed()),
-                KAxis.Point(3, labelStyle: .labeled("3"), lineStyle: .dashed()),
-                KAxis.Point(4, labelStyle: .labeled("4"), lineStyle: .dashed()),
-                KAxis.Point(5)],
-            labelsStyle: KAxis.LabelsStyle(position: .start))
-    }
-
-    var yAxis: KAxis {
-        KAxis(
-            behavior: .scrollable(pointsSpacing: 100.0, centerValue: 0.0),
-            points: [
-                KAxis.Point(-5),
-                KAxis.Point(-4, labelStyle: .labeled("-4"), lineStyle: .dashed()),
-                KAxis.Point(-3, labelStyle: .labeled("-3"), lineStyle: .dashed()),
-                KAxis.Point(-2, labelStyle: .labeled("-2"), lineStyle: .dashed()),
-                KAxis.Point(-1, labelStyle: .labeled("-1"), lineStyle: .dashed()),
-                KAxis.Point(0, labelStyle: .labeled("0", color: .black), lineStyle: .solid(width: 2.0, color: .black)),
-                KAxis.Point(1, labelStyle: .labeled("1"), lineStyle: .dashed()),
-                KAxis.Point(2, labelStyle: .labeled("2"), lineStyle: .dashed()),
-                KAxis.Point(3, labelStyle: .labeled("3"), lineStyle: .dashed()),
-                KAxis.Point(4, labelStyle: .labeled("4"), lineStyle: .dashed()),
-                KAxis.Point(5)],
-            labelsStyle: KAxis.LabelsStyle(position: .end))
-    }
-
-    var verticalBar: KBar {
-        .vertical(
-            origin: 1.0,
-            width: 0.8,
-            segments: [
-                KBar.Segment(
-                    identifier: UUID().uuidString,
-                    value: 2.0,
-                    accessibilityLabel: "Acc label for bar 1 segment 1",
-                    accessibilityValue: "2 points"),
-                KBar.Segment(
-                    identifier: UUID().uuidString,
-                    value: 1.0,
-                    accessibilityLabel: "Acc label for bar 1 segment 2",
-                    accessibilityValue: "1 points"),
-                KBar.Segment(
-                    identifier: UUID().uuidString,
-                    value: 0.5,
-                    accessibilityLabel: "Acc label for bar 1 segmnet 3",
-                    accessibilityValue: "0.5 points")
-            ],
-            yOffset: .zero,
-            segmentsStyle: KBar.SegmentsStyle(),
-            accessibilityIdentifier: "Bar1",
-            accessibilityLabel: "Bar 1")
-    }
-
-    var horizontalBar: KBar {
-        .horizontal(
-            origin: 1.0,
-            height: 0.8,
-            segments: [
-                KBar.Segment(
-                    identifier: UUID().uuidString,
-                    value: 2.0,
-                    accessibilityLabel: "Acc label for bar 1 segment 1",
-                    accessibilityValue: "2 points"),
-                KBar.Segment(
-                    identifier: UUID().uuidString,
-                    value: 1.0,
-                    accessibilityLabel: "Acc label for bar 1 segment 2",
-                    accessibilityValue: "1 points"),
-                KBar.Segment(
-                    identifier: UUID().uuidString,
-                    value: 0.5,
-                    accessibilityLabel: "Acc label for bar 1 segmnet 3",
-                    accessibilityValue: "0.5 points")
-            ],
-            xOffset: .zero,
-            segmentsStyle: KBar.SegmentsStyle(),
-            accessibilityIdentifier: "Bar1",
-            accessibilityLabel: "Bar 1")
-    }
-
-    var body: some View {
-        KAxisChart()
-            .xAxis(xAxis)
-            .yAxis(yAxis)
-            .addNegativeShadeRegions(color: Color.pink.opacity(0.5))
-            .addBar(horizontalBar)
-            .padding(16.0)
-    }
-}
-
-#Preview {
-    KAxisChartPreview()
-}
-#endif
-// swiftlint:disable:this file_length

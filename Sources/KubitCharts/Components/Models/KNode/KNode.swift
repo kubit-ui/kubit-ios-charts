@@ -1,6 +1,28 @@
 public import SwiftUI
 
-/// Node model.
+/// #  KNode
+///
+/// A node is a point that represents a specific data value. It visually marks the position of the data on the chart, helping to interpret and analyze the information. It is also interactive, showing the data when the user taps or hovers over it.
+///
+/// ## How to use it:
+/// ```
+/// let nodes = ([
+///     .polygon(
+///         position: KShape.Position(center: CGPoint(x: 2.0, y: 2.0), xRadius: 0.2),
+///         numberOfVertices: 4,
+///         style: KShape.Style(fillColor: Color.black.opacity(0.5), borderColor: Color.black, borderWidth: 1.0),
+///         accessibility: .decorative(identifier: "Square1")),
+///     .polygon(
+///         position: KShape.Position(center: CGPoint(x: 1.0, y: 2.0), xRadius: 0.2),
+///         numberOfVertices: 4,
+///         style: KShape.Style(fillColor: Color.black.opacity(0.5), borderColor: Color.black, borderWidth: 1.0),
+///         accessibility: .decorative(identifier: "Square2"))
+/// ])
+/// KAxisChart()
+///     .xAxis(xAxis)
+///     .yAxis(yAxis)
+///     .addNodes(nodes)
+/// ```
 public struct KNode: Equatable {
     /// The shape of the node. It is represented by a `KShape`.
     public let shape: KShape

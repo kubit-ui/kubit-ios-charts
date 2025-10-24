@@ -1,6 +1,24 @@
 import SwiftUI
 
-/// Area chart model.
+/// #  KArea
+///
+/// ## How to use it:
+/// ```
+/// let line = KArea.Line(
+///     points: exponentialPoints(factor: 5),
+///     appearance: .square,
+///     style: .solid(width: 1.0, color: .black))
+/// let decoration = .background(.linearGradient(
+///     Gradient(colors: [Color.yellow, .brown, .orange]),
+///     startPoint: UnitPoint(x: 0.4, y: 0.7),
+///     endPoint: UnitPoint(x: 1.0, y: 0.1)))
+/// KArea(
+///     mainLine: line,
+///     aboveLine: line,
+///     belowLine: line,
+///     decoration: decoration,
+///     accessibilityIdentifier: "Accessibility Identifier")
+/// ```
 public struct KArea: Equatable {
     /// The primary line of the area. It must have at least two points.
     public let mainLine: KArea.Line

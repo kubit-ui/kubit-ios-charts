@@ -1,12 +1,9 @@
 public import SwiftUI
 
 /// #  KLegend View
-///
+/// 
 /// A component that displays legends with primary and secondary values, with extensive customization
 /// options for colors, alignment, and orientation.
-///
-/// [Figma design]
-/// (figma.com/design/n9UUfTNerkDed8GBQMb6RM/(MAIN)-Kubit-Global-Documentation?node-id=52719-259497)
 ///
 /// ## How to use it:
 /// ```

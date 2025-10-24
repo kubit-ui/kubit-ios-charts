@@ -1,4 +1,4 @@
-// swiftlint:disable:this file_name
+
 public extension KBar.LabelStyle {
     /// Position for the component's label.
     struct Position: Equatable {

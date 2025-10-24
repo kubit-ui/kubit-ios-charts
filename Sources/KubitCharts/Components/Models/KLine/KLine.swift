@@ -1,6 +1,22 @@
 public import SwiftUI
 
-/// Line model.
+/// #  KLine
+///
+/// A visual representation of data that shows an evolution of one or more variables over a period of time or a continuous sequence.
+///
+/// ## How to use it:
+/// ```
+/// let lines: [KLine] = KLine(
+///     points: CGPoint(x: 1, y: 2),
+///     appearance: .square,
+///     style: .solid(
+///         width: 2.0,
+///         color: .red,
+///         decoration: .background(.red),
+///         accessibility: KLine.Accessibility(identifier: "KLineViewIdentifier"))
+/// KAxisChart()
+///     .addLines(lines)
+/// ```
 public struct KLine: Equatable {
     /// The array of points that defines the path of the line.
     public let points: [CGPoint]

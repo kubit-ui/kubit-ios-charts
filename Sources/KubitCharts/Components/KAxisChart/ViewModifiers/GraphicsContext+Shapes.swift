@@ -1,6 +1,5 @@
 import SwiftUI
 
-// swiftlint:disable function_parameter_count
 extension GraphicsContext {
     func drawCircle(center: CGPoint,
                     radius: CGFloat,
@@ -145,4 +144,3 @@ extension GraphicsContext {
         }
     }
 }
-// swiftlint:enable function_parameter_count

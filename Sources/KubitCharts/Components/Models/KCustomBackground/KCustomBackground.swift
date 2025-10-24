@@ -1,6 +1,16 @@
 import Foundation
 
-/// Custom background model.
+/// #  KCustomBackground
+///
+/// A flexible chart that supports any background image, such as maps or custom designs. It displays data with plots and adapts to any size.
+///
+/// ## How to use it:
+/// ```
+/// KAxisChart()
+///     .addBackground(
+///         KCustomBackground(source: .remote(url: URL(string: "url")),
+///         accessibility: KCustomBackground.Accessibility(identifier: "RemoteSourceIdentifier")))
+/// ```
 public struct KCustomBackground: Equatable {
     /// The source of the background, which defines where the background content is derived from.
     public let source: Source

@@ -1,4 +1,3 @@
-// swiftlint:disable:this file_name
 
 /// This extension provides style for the component.
 public extension KLine.Style {
