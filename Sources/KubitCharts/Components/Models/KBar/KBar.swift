@@ -2,7 +2,7 @@ public import Foundation
 
 /// #  KBar
 ///
-/// Is a visual representation of categorical data by means of rectangular bars. The length or height of each bar is proportional to the value it represents. It can contain horizontal or vertical bars to compare the values of different categories. Used to compare multiple part-to-whole relationships or ranking a single data set.
+/// Is a visual representation of categorical data by means of rectangular bars. The length or height of each bar is proportional to the value it represents. It can contain horizontal or vertical bars to compare the values of different categories. It is used to compare multiple part-to-whole relationships or ranking a single data set.
 ///
 /// ## How to use it:
 /// ```
