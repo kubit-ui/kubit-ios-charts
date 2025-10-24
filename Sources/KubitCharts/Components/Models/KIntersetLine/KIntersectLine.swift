@@ -2,7 +2,7 @@ import SwiftUI
 
 /// #  KIntersectLine
 ///
-/// An intersectLine is a line that extends from a node to help highlight or indicate its position more clearly.
+/// A line that extends from a node to help highlight or indicate its position more clearly.
 ///
 /// ## How to use it:
 /// ```
