@@ -2,7 +2,7 @@ public import SwiftUI
 
 /// #  KPieChart.
 ///
-/// A PieChart is a visual representation that breaks down numerical data into slices of a circle, showing how various components contribute to the total. It clearly illustrates the proportions of each segment, making it easy to grasp the overall distribution of the data.
+/// A PieChart visually divides numerical data into slices of a circle, illustrating how each component contributes to the whole. It effectively highlights the proportions of each segment, making it easy to understand the overall distribution of the data.
 ///
 /// ## How to use it:
 /// ```
