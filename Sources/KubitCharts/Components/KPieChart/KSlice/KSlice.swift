@@ -5,7 +5,7 @@ struct KSlice: View {
     struct SliceData {
         var startAngle: Angle
         var endAngle: Angle
-        var color: Color
+        var segment: KPieChart.Segment
     }
 
     @Binding var chartSize: CGFloat?
@@ -24,6 +24,7 @@ struct KSlice: View {
             let height = width
             let center = CGPoint(x: width * 0.5, y: height * 0.5)
             let radius = width * 0.5
+            let segment = sliceData.segment
             ZStack {
                 Path { path in
                     path.move(to: center)
@@ -34,11 +35,16 @@ struct KSlice: View {
                         endAngle: endAngle,
                         clockwise: false)
                 }
-                .fill(sliceData.color)
+                .fill(segment.color)
             }
             .onAppear {
                 chartSize = width
             }
+            .accessibilityIdentifier(segment.accessibility.identifier ?? "")
+            .accessibilityHidden(!segment.accessibility.isAccessible)
+            .accessibilityLabel(segment.accessibility.label ?? "")
+            .accessibilityValue(segment.accessibility.value ?? "")
+            .accessibilityHint(segment.accessibility.hint ?? "")
         }
     }
 }

@@ -10,6 +10,8 @@ public extension KAxis {
         public let labelStyle: KAxis.Point.LabelStyle
         /// The line style for the axis point, which determines how the line associated with the point is displayed.
         public let lineStyle: KAxis.Point.LineStyle
+        /// Accessibility information for the component.
+        public let accessibility: Accessibility?
 
         /// Axis Point Style initializer.
         /// - Parameters:
@@ -20,6 +22,23 @@ public extension KAxis {
             self.value = value
             self.labelStyle = labelStyle
             self.lineStyle = lineStyle
+            self.accessibility = nil
+        }
+
+        /// Axis Point Style initializer.
+        /// - Parameters:
+        ///   - value: the position of the point along the axis.
+        ///   - labelStyle: label style for the point. `.none` by default.
+        ///   - lineStyle: line style for the point. `.none` by default.
+        ///   - accessibility: accessibility information for the component.
+        public init(_ value: CGFloat,
+                    labelStyle: KAxis.Point.LabelStyle = .none,
+                    lineStyle: KAxis.Point.LineStyle = .none,
+                    accessibility: Accessibility) {
+            self.value = value
+            self.labelStyle = labelStyle
+            self.lineStyle = lineStyle
+            self.accessibility = accessibility
         }
     }
 }

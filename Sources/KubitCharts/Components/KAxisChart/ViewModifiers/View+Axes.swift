@@ -1,6 +1,6 @@
 import SwiftUI
 
-private struct AxisGrid: ViewModifier {
+struct AxisGrid: ViewModifier {
     var xAxis: KAxis
     var yAxis: KAxis
     var chartPaddings: KAxisChart.InnerPaddings
@@ -29,13 +29,17 @@ private struct AxisGrid: ViewModifier {
 // MARK: - Inner Views
 private extension AxisGrid {
     var axisGrid: some View {
-        Canvas { context, size in
-            context.translateBy(x: scrollOffset.width, y: scrollOffset.height)
-
-            let yAxisHeight = yAxis.realAxisHeight(canvasHeight: size.height)
-            context.drawAxis(axis: xAxis, size: size, lines: xAxis.xLines(for: size, yAxisHeight: yAxisHeight))
-            let xAxisWidth = xAxis.realAxisWidth(canvasWidth: size.width)
-            context.drawAxis(axis: yAxis, size: size, lines: yAxis.yLines(for: size, xAxisWidth: xAxisWidth))
+        ZStack {
+            Canvas { context, size in
+                context.translateBy(x: scrollOffset.width, y: scrollOffset.height)
+                let yAxisHeight = yAxis.realAxisHeight(canvasHeight: size.height)
+                context.drawAxis(axis: xAxis, size: size, lines: xAxis.xLines(for: size, yAxisHeight: yAxisHeight))
+                let xAxisWidth = xAxis.realAxisWidth(canvasWidth: size.width)
+                context.drawAxis(axis: yAxis, size: size, lines: yAxis.yLines(for: size, xAxisWidth: xAxisWidth))
+            }
+            GeometryReader { geo in
+                AccessibleLinesView(xAxis: xAxis, yAxis: yAxis, size: geo.size)
+            }
         }
     }
 
