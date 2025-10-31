@@ -11,6 +11,7 @@ public import SwiftUI
 ///      .borderWidth(borderWidth)
 ///      .separatorColor(.pink)
 ///      .isHalfPieChart(true)
+///      .bottomContentPadding(8)
 ///      .icon(...)
 ///      .label(label)
 /// ```
