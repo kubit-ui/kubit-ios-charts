@@ -29,27 +29,27 @@ public extension KPieChart {
         return pieChart
     }
 
-    /// Border width setter for ``KPieChart``.
+    /// Line width setter for ``KPieChart``.
     /// - Parameter width: width of the border of the component.
     /// - Returns: updated ``KPieChart``.
-    func borderWidth(_ width: CGFloat) -> KPieChart {
-        guard width != model.style.borderWidth else {
+    func lineWidth(_ width: CGFloat) -> KPieChart {
+        guard width != model.style.lineWidth else {
             return self
         }
         let pieChart = self
-        pieChart.model.style.borderWidth = width
+        pieChart.model.style.lineWidth = width
         return pieChart
     }
 
-    /// Inner border color setter for ``KPieChart``.
-    /// - Parameter color: color of the inner border.
+    /// Separator width setter for ``KPieChart``.
+    /// - Parameter width: separator width of the component.
     /// - Returns: updated ``KPieChart``.
-    func innerBorderColor(_ color: Color?) -> KPieChart {
-        guard color != model.style.innerBorderColor else {
+    func separatorWidth(_ width: CGFloat) -> KPieChart {
+        guard width != model.style.separatorWidth else {
             return self
         }
         let pieChart = self
-        pieChart.model.style.innerBorderColor = color
+        pieChart.model.style.separatorWidth = width
         return pieChart
     }
 
@@ -86,6 +86,18 @@ public extension KPieChart {
         }
         let pieChart = self
         pieChart.model.style.bottomContentPadding = bottomContentPadding
+        return pieChart
+    }
+
+    /// Donut chart setter for ``KPieChart``.
+    /// - Parameter isDonut: bool to show donut or full width chart.
+    /// - Returns: updated ``KPieChart``.
+    func isDonut(_ isDonut: Bool) -> KPieChart {
+        guard isDonut != model.style.isDonut else {
+            return self
+        }
+        let pieChart = self
+        pieChart.model.style.isDonut = isDonut
         return pieChart
     }
 }
@@ -135,7 +147,7 @@ public extension KPieChart {
         pieChart.model.accessibility.label = label
         return pieChart
     }
-    
+
     /// Accessibility label setter for  ``KPieChart``.
     /// - Parameter value: unique value for the accessibility component.
     /// - Returns: updated ``KPieChart``.
@@ -160,3 +172,4 @@ public extension KPieChart {
         return pieChart
     }
 }
+

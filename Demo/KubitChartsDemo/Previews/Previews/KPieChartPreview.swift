@@ -5,7 +5,6 @@ struct KPieChartPreview: View {
     var body: some View {
         ScrollView {
             variants
-            states
             options
             layout
         }
@@ -22,49 +21,11 @@ private extension KPieChartPreview {
     }
 
     var regular: some View {
-        KPieChartSection(numberOfSegments: 3, sectionTitle: "Regular")
+        KPieChartSection(numberOfSegments: 2, sectionTitle: "Regular")
     }
 
     var amount: some View {
-        KPieChartSection(numberOfSegments: 2, sectionTitle: "Amount")
-    }
-}
-
-// MARK: - States
-private extension KPieChartPreview {
-    var states: some View {
-        Group {
-            regularEmpty
-            regularError
-            regularFilled
-            amountEmpty
-            amountError
-            amountFilled
-        }
-    }
-
-    var regularEmpty: some View {
-        KPieChartSection(numberOfSegments: 0, sectionTitle: "Regular empty")
-    }
-
-    var regularError: some View {
-        KPieChartSection(error: true, sectionTitle: "Regular error")
-    }
-
-    var regularFilled: some View {
-        KPieChartSection(sectionTitle: "Regular filled")
-    }
-
-    var amountEmpty: some View {
-        KPieChartSection(numberOfSegments: 0, label: "N/A", sectionTitle: "Amount empty")
-    }
-
-    var amountError: some View {
-        KPieChartSection(error: true, label: "N/A", sectionTitle: "Amount error")
-    }
-
-    var amountFilled: some View {
-        KPieChartSection(label: "N/A", sectionTitle: "Amount filled")
+        KPieChartSection(numberOfSegments: 2, label: "0%", sectionTitle: "Amount")
     }
 }
 
@@ -75,7 +36,7 @@ private extension KPieChartPreview {
             withLabel
             withIcon
             error
-            empty
+            customWidth
             allElements
         }
     }
@@ -88,18 +49,18 @@ private extension KPieChartPreview {
         KPieChartSection(numberOfSegments: 3, sectionTitle: "With Icon")
     }
 
-    var empty: some View {
-        KPieChartSection(numberOfSegments: 0, sectionTitle: "Error")
-    }
-
     var error: some View {
-        KPieChartSection(numberOfSegments: 0, label: "N/A", sectionTitle: "Error")
+        KPieChartSection(numberOfSegments: 1, label: "N/A", sectionTitle: "Error")
     }
 
     var allElements: some View {
-        ForEach(0...12, id: \.self) { index in
+        ForEach(1...10, id: \.self) { index in
             KPieChartSection(numberOfSegments: index, sectionTitle: "\(index) elements")
         }
+    }
+
+    var customWidth: some View {
+        KPieChartSection(numberOfSegments: 5, lineWidth: 40, sectionTitle: "Custom Width")
     }
 }
 
@@ -107,58 +68,28 @@ private extension KPieChartPreview {
 private extension KPieChartPreview {
     var layout: some View {
         Group {
-            thinSegment
-            halfWidthSegment
             fullSegment
             halfPieChart
-            errorHalfPieChart
         }
     }
 
-    var thinSegment: some View {
-        KPieChartSection(sectionTitle: "Thin segment")
-    }
-
-    var halfWidthSegment: some View {
-        KPieChartSection(
-            innerBorderColor: Color.white,
-            borderWidth: 7,
-            sectionTitle: "Half width segment")
-    }
-
     var fullSegment: some View {
-        KPieChartSection(icon: nil, borderWidth: 30, sectionTitle: "Full width segment")
+        KPieChartSection(icon: nil, numberOfSegments: 5, donut: false, sectionTitle: "Full width segment")
     }
 
     var halfPieChart: some View {
-        KPieChartSection(
-            numberOfSegments: 5,
-            isHalfPieChart: true,
-            bottomContentPadding: 50,
-            sectionTitle: "Half pie chart")
-    }
-
-    var errorHalfPieChart: some View {
-        KPieChartSection(
-            numberOfSegments: 0,
-            label: "N/A",
-            isHalfPieChart: true,
-            bottomContentPadding: 50,
-            sectionTitle: "Error half pie chart")
+        KPieChartSection(numberOfSegments: 4, isHalfPieChart: true, sectionTitle: "Half pie chart")
     }
 }
 
 // MARK: - KPieChart Section
 private struct KPieChartSection: View {
     var icon: KImageResource? = KImage.LocalResource(name: "icon_brand_placeholder")
-    var parentBackgroundColor: Color = .white
-    var innerBorderColor: Color = .gray
     var numberOfSegments: Int = 3
-    var error: Bool = false
+    var donut: Bool = true
     var label: String?
-    var borderWidth: CGFloat = 1
+    var lineWidth: CGFloat = 20
     var isHalfPieChart: Bool = false
-    var bottomContentPadding: CGFloat = 0
     var sectionTitle: String = ""
 
     var body: some View {
@@ -168,14 +99,16 @@ private struct KPieChartSection: View {
                     .font(.caption)
                     .bold()
                 KPieChart(segments: segments, font: .caption, identifier: "\(KPieChart.self)Identifier")
-                    .backgroundColor(.white)
-                    .borderWidth(borderWidth)
-                    .innerBorderColor(innerBorderColor)
-                    .separatorColor(.blue)
+                    .lineWidth(lineWidth)
                     .isHalfPieChart(isHalfPieChart)
-                    .bottomContentPadding(bottomContentPadding)
                     .icon(!isLabelEnabled ? icon : nil)
                     .label(label)
+                    .accessibilityLabel("\(sectionTitle) Pie Chart")
+                    .isDonut(donut ? true : false)
+                    .bottomContentPadding(isHalfPieChart ? 40 : 0)
+                    .backgroundColor(Color.white)
+                    .separatorWidth(5)
+                    .separatorColor(Color.white)
                     .frame(width: 200, height: 200)
             }
         }
@@ -184,8 +117,12 @@ private struct KPieChartSection: View {
 
 private extension KPieChartSection {
     var allAvailableSegments: [KPieChart.Segment] {
-        KPieChart.Segment.PresetColor.allColors.map { color in
-            .preset(color, value: Double(Int.random(in: 1...10)))
+        let value = Double(Int.random(in: 1...10))
+        return KPieChart.Segment.PresetColor.allColors.map { color in
+                .preset(color, value: value)
+                .accessibilityLabel("Segment")
+                .accessibilityValue("with value: \(value)")
+                .accessibilityHint("This is a hint example.")
         }
     }
 

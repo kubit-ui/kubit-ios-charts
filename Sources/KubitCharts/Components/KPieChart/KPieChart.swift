@@ -9,20 +9,15 @@ public import SwiftUI
 ///  KPieChart(segments: segments, font: .caption, identifier: "Identifier")
 ///      .backgroundColor(.white)
 ///      .borderWidth(borderWidth)
-///      .innerBorderColor(.blue)
 ///      .separatorColor(.pink)
 ///      .isHalfPieChart(true)
-///      .bottomContentPadding(8)
 ///      .icon(...)
 ///      .label(label)
 /// ```
 ///
 /// This component also supports accessibility.
 public struct KPieChart: View {
-    @State var chartSize: CGFloat?
     @ObservedObject var model: Model
-
-    private typealias SliceData = KSlice.SliceData
 
     /// It initializes ``KPieChart`` view with segments, font, and accessibility identifier.
     /// - Parameters:
@@ -31,55 +26,76 @@ public struct KPieChart: View {
     ///   - identifier: a unique identifier for the accessibility component.
     public init(segments: [Segment], font: Font, identifier: String) {
         self.model = Model(
-                    configuration: Configuration(segments: segments),
-                    style: StyleConfiguration(font: font),
-                    accessibility: Accessibility(identifier: identifier))
+            configuration: Configuration(segments: segments),
+            style: StyleConfiguration(font: font),
+            accessibility: Accessibility(identifier: identifier))
     }
 
     public var body: some View {
-        GeometryReader { geometry in
-            ZStack {
-                ForEach(slicesData.indices, id: \.self) { index in
-                    KSlice(chartSize: $chartSize, sliceData: self.slicesData[index])
-                }
-                .frame(width: geometry.size.width, height: geometry.size.height)
-
-                innerBorderColor(geometry.size)
-                innerBackgroundView(geometry.size)
-
-                mainContent
-                    .padding(.bottom, style.bottomContentPadding)
+        ZStack {
+            ForEach(segments.indices, id: \.self) { index in
+                segmentView(index)
             }
-            .frame(width: chartSize, height: chartSize)
-            .accessibilityElement(children: .contain)
-            .accessibilityIdentifier(accessibility.identifier)
-            .accessibilityLabel(accessibility.label ?? "")
-            .accessibilityValue(accessibility.value ?? "")
-            .accessibilityHint(accessibility.hint ?? "")
+
+            if isLabelEnabled {
+                labelView
+                    .padding(.bottom, bottomContentPadding)
+            }
+
+            if isIconEnabled {
+                iconView
+                    .padding(.bottom, bottomContentPadding)
+            }
         }
+        .background(innerBackgroundColor)
+        .accessibilityElement(children: .contain)
+        .accessibilityLabel(accessibility.label ?? "")
+        .accessibilityValue(accessibility.value ?? "")
+        .accessibilityHint(accessibility.hint ?? "")
     }
 }
 
+// MARK: - Segment Rendering
+ private extension KPieChart {
+    @ViewBuilder
+    func segmentView(_ index: Int) -> some View {
+        let angle = angles[index]
+        let segmentColor = segments[index].color
+
+        // Segment Shape
+        KPieSegment(
+            startAngle: angle.start,
+            endAngle: angle.end,
+            isDonut: isDonut,
+            lineWidth: isDonut ? lineWidth : 0)
+        .applyStyle(isDonut: isDonut, color: segmentColor, lineWidth: lineWidth)
+
+        // Separator Shape
+        if segments.count > 1 {
+            KPieSegment(
+                startAngle: angle.start,
+                endAngle: angle.end,
+                isDonut: false,
+                lineWidth: 0)
+            .stroke(
+                separatorColor,
+                style: StrokeStyle(
+                    lineWidth: separatorWidth,
+                    lineCap: .butt,
+                    lineJoin: .round))
+        }
+    }
+ }
+
 // MARK: - Inner Views
 private extension KPieChart {
-    @ViewBuilder
-    func innerBorderColor(_ size: CGSize) -> some View {
-        Circle()
-            .trim(from: isHalfPieChart ? 0.5 : 0, to: 1)
-            .fill(style.innerBorderColor ?? .clear)
-            .frame(
-                width: max(0, size.width - radiusBorderSize),
-                height: max(0, abs(size.height - radiusBorderSize)))
-    }
-
-    @ViewBuilder
-    func innerBackgroundView(_ size: CGSize) -> some View {
-        Circle()
-            .trim(from: isHalfPieChart ? 0.5 : 0, to: 1)
-            .fill(style.backgroundColor ?? .clear)
-            .frame(
-                width: max(0, size.width - radiusBorderSize - innerBackgroundPadding),
-                height: max(0, abs(size.height - radiusBorderSize - innerBackgroundPadding)))
+    @ViewBuilder var innerBackgroundColor: some View {
+        if isDonut {
+            Circle()
+                .trim(from: 0.0, to: isHalfPieChart ? 0.5 : 1.0)
+                .fill(style.backgroundColor ?? .clear)
+                .rotationEffect(.degrees(isHalfPieChart ? 180 : 0))
+        }
     }
 
     @ViewBuilder var labelView: some View {
@@ -89,13 +105,6 @@ private extension KPieChart {
                 .font(styleConfiguration.font)
                 .accessibilityIdentifier(accessibility.labelIdentifier)
         }
-    }
-
-    @ViewBuilder var mainContent: some View {
-        if isLabelEnabled {
-            labelView
-        }
-        iconView
     }
 
     @ViewBuilder var iconView: some View {
@@ -130,69 +139,49 @@ private extension KPieChart {
         configuration.label != nil
     }
 
-    // Outer circle border size
-    var radiusBorderSize: CGFloat {
-        10 * style.borderWidth
-    }
-
-    // Inner circle container border size
-    var innerBackgroundPadding: CGFloat {
-        12 * style.borderWidth
+    var isIconEnabled: Bool {
+        configuration.icon != nil
     }
 
     var isHalfPieChart: Bool {
         style.isHalfPieChart
     }
+
+    var isDonut: Bool {
+        style.isDonut
+    }
+
+    var separatorWidth: CGFloat {
+        style.separatorWidth
+    }
+
+    var separatorColor: Color {
+        style.separatorColor ?? .clear
+    }
+
+    var lineWidth: CGFloat {
+        style.lineWidth
+    }
+
+    var bottomContentPadding: CGFloat {
+        style.bottomContentPadding
+    }
 }
 
 // MARK: - Helper
 private extension KPieChart {
-    // Slices data
-    private var slicesData: [SliceData] {
-        var separators: Int {
-            segments.count > 1 ? segments.count : 0
+    var angles: [(start: Angle, end: Angle)] {
+        var currentAngle = isHalfPieChart ? -180 : -90.0
+        return segments.map { slice in
+            let start = currentAngle
+            let angle = (isHalfPieChart ? 180 : 360) * (slice.value / total)
+            let end = currentAngle + angle
+            currentAngle = end
+            return (Angle(degrees: start), Angle(degrees: end))
         }
+    }
 
-        var totalAmount: Double {
-            let slicesAmount = segments
-                .map { $0.value }
-                .reduce(0, +)
-            var spacingAmount = slicesAmount
-            for _ in .zero..<separators {
-                spacingAmount *= (101 / 100)
-            }
-
-            return segments.isEmpty ? 1 : spacingAmount
-        }
-
-        var auxiliarSegments: [KPieChart.Segment] {
-            var auxiliarSegments: [KPieChart.Segment] = []
-
-            if segments.isEmpty {
-                return [KPieChart.Segment(value: 1, color: .gray)]
-            }
-
-            let separator = KPieChart.Segment(value: totalAmount * 1 / 100, color: style.separatorColor ?? .clear)
-
-            segments.forEach { slice in
-                auxiliarSegments.append(slice)
-                auxiliarSegments.append(separator)
-            }
-            return auxiliarSegments
-        }
-
-        var endDegrees: Double = isHalfPieChart ? -90 : 0
-        var slicesData: [SliceData] = []
-
-        auxiliarSegments.forEach { segment in
-            let totalDegrees: Double = isHalfPieChart ? 179.7 : 360
-            let degrees: Double = segment.value * totalDegrees / totalAmount
-            slicesData.append(SliceData(
-                startAngle: Angle(degrees: endDegrees),
-                endAngle: Angle(degrees: endDegrees + degrees),
-                segment: segment))
-            endDegrees += degrees
-        }
-        return slicesData
+    var total: Double {
+        segments.reduce(0) { $0 + $1.value }
     }
 }
