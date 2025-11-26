@@ -217,8 +217,8 @@ private extension KAxisChartPreview {
     var complex: some View {
         KAxisChartSection(
             title: "Complex",
-            xAxis: SBAxisHelper.complexAxis(position: .custom(scaledValue: 0.5, offset: 10.0), label0: "V0", label: "VX"),
-            yAxis: SBAxisHelper.complexAxis(position: .custom(scaledValue: 0.5, offset: 4.0), label0: "V0", label: "VY"))
+            xAxis: SBAxisHelper.complexAxis(position: .custom(scaledValue: 0.5, offset: -10.0), label0: "", label: "VX"),
+            yAxis: SBAxisHelper.complexAxis(position: .custom(scaledValue: 0.5, offset: 10.0), label0: "V0", label: "VY"))
         .frame(maxWidth: .infinity)
         .frame(height: 350.0)
     }
@@ -235,8 +235,8 @@ private extension KAxisChartPreview {
     var scrollable: some View {
         KAxisChartSection(
             title: "Scrollable",
-            xAxis: SBAxisHelper.scrollableAxis(label0: "V0", label: "VX", offset: 8.0),
-            yAxis: SBAxisHelper.scrollableAxis(label0: "V0", label: "VY", offset: 4.0))
+            xAxis: SBAxisHelper.scrollableAxis(label0: "", label: "VX", offset: -10.0),
+            yAxis: SBAxisHelper.scrollableAxis(label0: "V0", label: "VY", offset: 10.0))
         .frame(maxWidth: .infinity)
         .frame(height: 350.0)
     }

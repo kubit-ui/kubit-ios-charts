@@ -56,7 +56,11 @@ private extension AxisGrid {
                     var customPosition: CGFloat?
                     let anchor: UnitPoint
                     if case let .custom(value, labelsOffset) = xAxis.labelsStyle.position.type, value >= 0, value <= 1 {
-                        context.translateBy(x: scrollOffset.width, y: scrollOffset.height)
+                        if scrollOffset.width > 0 || scrollOffset.height > 0 {
+                            context.translateBy(
+                                x: scrollOffset.width + (xAxis.labelsStyle.minSize.width / 2),
+                                y: scrollOffset.height - (xAxis.labelsStyle.minSize.height / 2))
+                        }
                         customPosition = size.height - yAxisHeight * value + labelsOffset
                         anchor = .center
                     } else {
@@ -101,8 +105,12 @@ private extension AxisGrid {
                     let anchor: UnitPoint
                     if case let .custom(value, labelsOffset) = yAxis.labelsStyle.position.type, value >= 0, value <= 1 {
                         customPosition = xAxisWidth * value + labelsOffset
-                        context.translateBy(x: scrollOffset.width, y: scrollOffset.height)
-                        anchor = .leading
+                        if scrollOffset.width > 0 || scrollOffset.height > 0 {
+                            context.translateBy(
+                                x: scrollOffset.width + (yAxis.labelsStyle.minSize.width / 2),
+                                y: scrollOffset.height - (yAxis.labelsStyle.minSize.height / 2))
+                        }
+                        anchor = .center
                     } else {
                         context.translateBy(x: .zero, y: scrollOffset.height)
                         anchor = yAxis.labelsStyle.position == .start ? .trailing : .leading
